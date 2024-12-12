@@ -1,0 +1,70 @@
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практичне застосування елементів CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-background">
+    <script src="script.js" defer></script>
+    <header>
+        <h1>Контакти</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="types.html">Види динозаврів</a></li>
+                <li><a href="classification.html">Класифікація</a></li>
+                <li><a href="culture.html">Динозаври в культурі</a></li>
+                <li><a href="paleontology.html">Палеонтологія</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Форма опитування</h2>
+        <form id="surveyForm">
+            <fieldset>
+                <legend>Ваш улюблений динозавр:</legend>
+                <label><input type="radio" name="dinosaur" value="Тиранозавр"> Тиранозавр</label><br>
+                <label><input type="radio" name="dinosaur" value="Стегозавр"> Стегозавр</label><br>
+                <label><input type="radio" name="dinosaur" value="Трицератопс"> Трицератопс</label><br>
+                <label><input type="radio" name="dinosaur" value="Брахіозавр"> Брахіозавр</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Виберіть цікаві для вас аспекти:</legend>
+                <label><input type="checkbox" name="interest" value="Історія"> Історія</label><br>
+                <label><input type="checkbox" name="interest" value="Палеонтологія"> Палеонтологія</label><br>
+                <label><input type="checkbox" name="interest" value="Анатомія"> Анатомія</label><br>
+                <label><input type="checkbox" name="interest" value="Екологія"> Екологія</label><br>
+                <label><input type="checkbox" name="interest" value="Музеї"> Музеї</label><br>
+            </fieldset>
+
+            <label>Ваш відгук:</label><br>
+            <textarea id="feedback" placeholder="Напишіть ваш відгук..."></textarea><br>
+
+            <div>
+                <button type="button" onclick="submitSurvey()">Підтвердити</button>
+                <button type="reset">Очистити</button>
+            </div>
+
+            <p id="error-message" class="error"></p>
+        </form>
+
+        <h2>Форма повідомлення</h2>
+        <form id="messageForm">
+            <label>Ваше повідомлення:</label><br>
+            <textarea id="userMessage" placeholder="Напишіть ваше повідомлення..."></textarea><br>
+
+            <div>
+                <button type="button" onclick="sendMessage()">Відправити</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Автор сайту: пивозавр.</p>
+    </footer>
+</body>
+</html>
